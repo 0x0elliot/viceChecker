@@ -8,7 +8,26 @@ import datetime
 load_dotenv()
 
 def check_if_script_ran_today(sh):
-    today = datetime.date.today().strftime("%d/%m/%y")
+    # get path of the file
+    path_of_file = os.path.abspath(__file__)
+
+    if not os.path.exists(f"{os.path.dirname(path_of_file)}/.cache"):
+        with open(f"{os.path.dirname(path_of_file)}/.cache", "w") as f:
+            f.write("")
+
+    with open(f"{os.path.dirname(path_of_file)}/.cache", "r") as f:
+        last_ran = f.read()
+        try:
+            last_ran = datetime.datetime.strptime(last_ran, "%d/%m/%Y")
+            if last_ran.strftime("%d/%m/%Y") == datetime.date.today().strftime("%d/%m/%Y"):
+                return True
+        except Exception as e:
+            last_ran = datetime.datetime.strptime("01/01/1970", "%d/%m/%Y")
+
+    today = datetime.date.today().strftime("%d/%m/%Y")
+
+    with open(".cache", "w") as f:
+        f.write(today)
 
     rows = sh.sheet1.get_all_values()
     
@@ -17,7 +36,7 @@ def check_if_script_ran_today(sh):
             continue
 
         row_datetime = datetime.datetime.strptime(row[0], "%d/%m/%Y")
-        if row_datetime.strftime("%d/%m/%y") == today:
+        if row_datetime.strftime("%d/%m/%Y") == today:
             return True
 
     return False
