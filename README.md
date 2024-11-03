@@ -1,16 +1,26 @@
 # viceCounter :smoking:
 
-Almost everytime, positive reinforcement is the key to quitting a bad habit. This script is a small step towards that.
+Almost everytime, positive reinforcement is always better.  Do not guilt yourself. Just keep track.
 
-Do not guilt yourself. Just keep track of the number of ciggrettes you have been doing and how many days you have been off of it.
-
-The script displays number of days you have been off of ciggrettes and the number of ciggrettes you have been doing. It also displays the number of days you have been off of it.
-
-Helps you count the number of ciggrettes you have been doing and how many days you have been off of it.
+The script displays the number of days you have been off of it.
 
 The script was written for a google sheet that looks like [this](https://docs.google.com/spreadsheets/d/16s_Fe10OwKtn3cZu1nBdnDK4j7ZkZB6iNzbhkggpNZM/edit?gid=0#gid=0).
 
-The intention of the script is for nerds who open their terminals everyday. The script will help you keep track of the number of ciggrettes you have been doing and how many days you have been off of it.
+The intention of the script is for nerds who open their terminals everyday.
+
+## Working
+
+1. When you open your terminal for the first time in the day, You see this:
+
+
+<img width="646" alt="Screenshot 2024-11-03 at 6 03 17 AM" src="https://github.com/user-attachments/assets/ebf5fbd5-0f1e-43bb-8c3b-5eb690869495">
+
+
+2. Then, when you fill the inputs like I did, Your google sheet updates:
+
+<img width="1287" alt="Screenshot 2024-11-03 at 6 04 20 AM" src="https://github.com/user-attachments/assets/915a8c81-2e32-4de5-b528-7e902afe8cf7">
+
+
 
 ## Setup
 1. Clone the repository
