@@ -25,7 +25,14 @@ The intention of the script is for nerds who open their terminals everyday.
 ## Setup
 1. Clone the repository
 2. Setup google sheet in .env
-3. Set up venv
+
+```bash
+mv .env.template .env
+```
+
+Then edit .env to make sure the setup works.
+
+4. Set up venv
 ```bash
 python3 -m venv venv
 source venv/bin/activate
