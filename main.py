@@ -27,7 +27,7 @@ def file_level_caching():
 
     today = datetime.date.today().strftime("%d/%m/%Y")
 
-    with open(".cache", "w") as f:
+    with open(f"{os.path.dirname(path_of_file)}/.cache", "w") as f:
         f.write(today)
 
     if ran_today:
