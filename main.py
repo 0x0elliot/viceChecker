@@ -86,7 +86,7 @@ def calculate_days_sober(sh):
 
 file_level_caching()
 
-gc = gspread.service_account(filename="credentials.json")
+gc = gspread.service_account(filename=f"{os.path.dirname(os.path.abspath(__file__))}/credentials.json")
 
 sh = gc.open_by_key(os.getenv("PHUPHU_SHEET_ID"))
 
