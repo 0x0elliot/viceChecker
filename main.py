@@ -105,7 +105,7 @@ if not ("y" in want):
     print(f"Days sober from other substances: {sober_days[1]}")
     exit()
 
-cigs = int(input("How many cigarettes did you smoke today? "))
+cigs = float(input("How many cigarettes did you smoke today? "))
 
 others = input("Did you do any other substances today? (y/n): ")
 
