@@ -51,5 +51,10 @@ pip install -r requirements.txt
 
 Now everytime you open your terminal, the script will run and update the google sheet. Cheers!
 
+## Having trouble running this? 
+
+Open an issue. I will take some time to help you out. Also feel free to make a PR for better updates to this script. Cheers!
+
 
 Hope you're able to leave your ciggs. Good luck!
+
